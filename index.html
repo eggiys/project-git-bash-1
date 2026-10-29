@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalimantan FireWatch - Pemantauan & Edukasi Karhutla</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🔥</span> Kalimantan <span>FireWatch</span>
+            </a>
+            <button class="hamburger" id="hamburger-btn" aria-label="Buka Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links" id="nav-menu">
+                <ul>
+                    <li><a href="#beranda" class="nav-item">Beranda</a></li>
+                    <li><a href="#informasi" class="nav-item">Informasi Karhutla</a></li>
+                    <li><a href="#wilayah" class="nav-item">Wilayah</a></li>
+                    <li><a href="#dampak" class="nav-item">Dampak</a></li>
+                    <li><a href="#pencegahan" class="nav-item">Pencegahan</a></li>
+                    <li><a href="#sumber" class="nav-item">Sumber Resmi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge">Edukasi & Pemantauan Karhutla</span>
+                <h1>Pantau Karhutla, Lindungi Hutan Kalimantan</h1>
+                <p>
+                    Portal informasi publik untuk meningkatkan kesadaran, memantau titik panas, serta memahami langkah pencegahan kebakaran hutan dan lahan di Pulau Kalimantan.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#informasi" class="btn btn-primary">Lihat Informasi</a>
+                    <a href="#dampak" class="btn btn-outline">Pelajari Dampak</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Hutan Kalimantan" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- RINGKASAN INFORMASI / STATISTIK -->
+    <section class="summary-section">
+        <div class="container">
+            <div class="disclaimer-banner">
+                ⚠️ <strong>Catatan:</strong> Data angka di bawah ini merupakan <em>Data Simulasi untuk Demonstrasi</em>. Untuk pemantauan titik panas (hotspot) terverifikasi secara real-time, silakan akses portal resmi SiPongi KLHK atau BMKG.
+            </div>
+            <div class="cards-grid">
+                <div class="card card-stat">
+                    <div class="stat-icon">📡</div>
+                    <div class="stat-info">
+                        <h3>18 Titik</h3>
+                        <p>Titik Panas Terpantau (Simulasi)</p>
+                    </div>
+                </div>
+                <div class="card card-stat">
+                    <div class="stat-icon">🗺️</div>
+                    <div class="stat-info">
+                        <h3>3 Provinsi</h3>
+                        <p>Wilayah Waspada</p>
+                    </div>
+                </div>
+                <div class="card card-stat">
+                    <div class="stat-icon">🕒</div>
+                    <div class="stat-info">
+                        <h3>Hari Ini, 08:00 WIB</h3>
+                        <p>Waktu Pembaruan</p>
+                    </div>
+                </div>
+                <div class="card card-stat">
+                    <div class="stat-icon">⚠️</div>
+                    <div class="stat-info">
+                        <h3 class="status-warning">Siaga Ringan</h3>
+                        <p>Status Peringatan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFORMASI KARHUTLA & SEARCH/FILTER -->
+    <section id="informasi" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Laporan & Informasi Karhutla</h2>
+                <p>Daftar rangkuman berita dan kejadian kebakaran lahan terbaru di Kalimantan.</p>
+            </div>
+
+            <!-- Filter dan Pencarian -->
+            <div class="filter-container">
+                <input type="text" id="search-input" placeholder="Cari berdasarkan judul atau wilayah..." class="search-input">
+                <select id="province-filter" class="filter-select">
+                    <option value="all">Semua Provinsi</option>
+                    <option value="Kalimantan Barat">Kalimantan Barat</option>
+                    <option value="Kalimantan Tengah">Kalimantan Tengah</option>
+                    <option value="Kalimantan Selatan">Kalimantan Selatan</option>
+                    <option value="Kalimantan Timur">Kalimantan Timur</option>
+                    <option value="Kalimantan Utara">Kalimantan Utara</option>
+                </select>
+            </div>
+
+            <!-- Container Berita -->
+            <div id="reports-grid" class="cards-grid">
+                <!-- Data berita dimasukkan secara dinamis via JavaScript -->
+            </div>
+
+            <div id="no-results" class="no-results hidden">
+                <p>🔍 Tidak ditemukan laporan yang sesuai dengan pencarian atau filter Anda.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WILAYAH KALIMANTAN -->
+    <section id="wilayah" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Wilayah Kalimantan</h2>
+                <p>Mengenal 5 wilayah administratif utama di Pulau Kalimantan dan karakteristik wilayahnya.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card region-card">
+                    <h3>Kalimantan Barat</h3>
+                    <p>Memiliki wilayah gambut yang cukup luas di kawasan pesisir dan pedalaman, memerlukan pengawasan ekstra saat musim kemarau.</p>
+                    <button class="btn btn-sm" onclick="filterByProvince('Kalimantan Barat')">Lihat Laporan</button>
+                </div>
+                <div class="card region-card">
+                    <h3>Kalimantan Tengah</h3>
+                    <p>Sering menjadi perhatian utama dalam penanggulangan karhutla karena keberadaan lahan gambut dalam yang rawan terbakar.</p>
+                    <button class="btn btn-sm" onclick="filterByProvince('Kalimantan Tengah')">Lihat Laporan</button>
+                </div>
+                <div class="card region-card">
+                    <h3>Kalimantan Selatan</h3>
+                    <p>Sebagian besar wilayah terdiri dari pemukiman, pertanian, dan lahan semak belukar yang rentan dipicu pembukaan lahan.</p>
+                    <button class="btn btn-sm" onclick="filterByProvince('Kalimantan Selatan')">Lihat Laporan</button>
+                </div>
+                <div class="card region-card">
+                    <h3>Kalimantan Timur</h3>
+                    <p>Wilayah dengan topografi bervariasi dan kawasan hutan lindung serta industri komoditas ekosistem penting.</p>
+                    <button class="btn btn-sm" onclick="filterByProvince('Kalimantan Timur')">Lihat Laporan</button>
+                </div>
+                <div class="card region-card">
+                    <h3>Kalimantan Utara</h3>
+                    <p>Wilayah perbatasan dengan tutupan hutan primer yang masih cukup lebat, membutuhkan upaya keanekaragaman hayati dijaga.</p>
+                    <button class="btn btn-sm" onclick="filterByProvince('Kalimantan Utara')">Lihat Laporan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DAMPAK KARHUTLA -->
+    <section id="dampak" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dampak Karhutla</h2>
+                <p>Kebakaran hutan dan lahan membawa konsekuensi serius bagi lingkungan, kesehatan, dan ekonomi.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card impact-card">
+                    <div class="impact-icon">💨</div>
+                    <h3>Pencemaran Udara</h3>
+                    <p>Kabut asap menurunkan kualitas udara (ISPU) hingga tingkat berbahaya dan mengurangi jarak pandang.</p>
+                </div>
+                <div class="card impact-card">
+                    <div class="impact-icon">🏥</div>
+                    <h3>Gangguan Kesehatan</h3>
+                    <p>Meningkatnya risiko kasus ISPA (Infeksi Saluran Pernapasan Akut), iritasi mata, dan penyakit paru pada warga.</p>
+                </div>
+                <div class="card impact-card">
+                    <div class="impact-icon">🐾</div>
+                    <h3>Kerusakan Habitat</h3>
+                    <p>Ancaman langsung bagi kelangsungan satwa endemik seperti Orangutan, Bekantan, dan flora langka.</p>
+                </div>
+                <div class="card impact-card">
+                    <div class="impact-icon">🌱</div>
+                    <h3>Kerusakan Ekosistem</h3>
+                    <p>Degradasi lahan gambut melepaskan emisi karbon berlebih ke atmosfer yang mempercepat perubahan iklim.</p>
+                </div>
+                <div class="card impact-card">
+                    <div class="impact-icon">✈️</div>
+                    <h3>Kerugian Ekonomi</h3>
+                    <p>Lumpuhnya transportasi udara/darat, gangguan aktivitas sekolah, perdagangan, dan mata pencaharian warga.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENCEGAHAN DAN PENANGANAN -->
+    <section id="pencegahan" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pencegahan & Penanganan</h2>
+                <p>Langkah nyata yang dapat dilakukan masyarakat untuk mencegah timbulnya titik api.</p>
+            </div>
+            <div class="prevention-grid">
+                <div class="prevention-item">
+                    <span class="num">1</span>
+                    <div>
+                        <h4>Hindari Pembakaran Lahan</h4>
+                        <p>Jangan membersihkan atau membuka lahan bercocok tanam dengan cara dibakar.</p>
+                    </div>
+                </div>
+                <div class="prevention-item">
+                    <span class="num">2</span>
+                    <div>
+                        <h4>Kelola Puntung Rokok & Sampah</h4>
+                        <p>Tidak membuang puntung rokok sembarangan atau membuat api unggun tanpa pengawasan di kawasan rawan.</p>
+                    </div>
+                </div>
+                <div class="prevention-item">
+                    <span class="num">3</span>
+                    <div>
+                        <h4>Segera Laporkan Indikasi Api</h4>
+                        <p>Jika melihat kepulan asap atau titik api kecil, segera laporkan ke RT/RW, Manggala Agni, atau aparat setempat.</p>
+                    </div>
+                </div>
+                <div class="prevention-item">
+                    <span class="num">4</span>
+                    <div>
+                        <h4>Gunakan Masker Standar</h4>
+                        <p>Saat terjadi kabut asap, gunakan masker N95/medis dan kurangi aktivitas luar ruangan yang tidak mendesak.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUMBER INFORMASI RESMI -->
+    <section id="sumber" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sumber Informasi Resmi</h2>
+                <p>Akses informasi tepercaya dan data real-time langsung dari instansi pemerintah terkait.</p>
+            </div>
+            <div class="sources-grid">
+                <a href="https://www.bmkg.go.id" target="_blank" rel="noopener noreferrer" class="source-card">
+                    <h3>BMKG</h3>
+                    <p>Informasi cuaca, prakiraan musim, dan analisis kualitas udara.</p>
+                    <span class="link-label">Kunjungi BMKG &rarr;</span>
+                </a>
+                <a href="https://sipongi.menlhk.go.id" target="_blank" rel="noopener noreferrer" class="source-card">
+                    <h3>SiPongi KLHK</h3>
+                    <p>Sistem Informasi Karhutla Kementerian Lingkungan Hidup dan Kehutanan.</p>
+                    <span class="link-label">Kunjungi SiPongi &rarr;</span>
+                </a>
+                <a href="https://www.bnpb.go.id" target="_blank" rel="noopener noreferrer" class="source-card">
+                    <h3>BNPB</h3>
+                    <p>Badan Nasional Penanggulangan Bencana untuk penanganan darurat bencana.</p>
+                    <span class="link-label">Kunjungi BNPB &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h3>Kalimantan FireWatch</h3>
+                <p>Website informasi dan edukasi lingkungan untuk mendukung pencegahan kebakaran hutan dan lahan di Kalimantan.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigasi Cepat</h4>
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#informasi">Informasi</a></li>
+                    <li><a href="#dampak">Dampak</a></li>
+                    <li><a href="#pencegahan">Pencegahan</a></li>
+                </ul>
+            </div>
+            <div class="footer-disclaimer">
+                <h4>Catatan Proyek</h4>
+                <p>Website ini merupakan proyek informasi & edukasi. Seluruh data aktual harus selalu diverifikasi melalui instansi pemerintah resmi.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kalimantan FireWatch. Dibuat untuk kesadaran lingkungan.</p>
+        </div>
+    </footer>
+
+    <!-- TOMBOL BACK TO TOP -->
+    <button id="back-to-top" class="back-to-top" aria-label="Kembali ke atas">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
